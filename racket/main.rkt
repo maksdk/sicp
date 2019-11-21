@@ -9,3 +9,6 @@
 )
         
 (displayln (square-of-sum 2 2))
+
+
+(define (same-parity? x y) (or (and (odd? x) (odd? y)) (and (even? x) (even? y))))
