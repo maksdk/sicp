@@ -23,3 +23,46 @@
 
 (displayln (odd? 3)) ;true
 (displayln (odd? 4)) ;false
+
+(if (> 3 2) (displayln "yes") (displayln "no")) ; "yes"
+
+(define (sentence-type str) 
+   (
+      let ([upperStr (string-upcase str)])
+      (if (= str upperStr) "cry" "common")
+   )
+)
+
+(define (sentence-type str)
+   (let ([upS (string-upcase str)])
+      (if (equal? str upS) "cry" "common")
+   )
+)
+
+(define (sentence-type text) (if (equal? (string-upcase text) text)
+                               "cry"
+                               "common"))
+
+
+; when unless 
+
+(when (positive? -5)
+  (display "hi"))
+
+(when (positive? 5)
+  (display "hi")
+  (display " there"))
+
+
+(unless (positive? 5)
+  (display "hi"))
+
+(unless (positive? -5)
+  (display "hi")
+  (display " there"))
+
+; return simple value 
+  (define (say-boom str) 
+    (when (equal? str "go") "Boom!"))
+    
+(displayln (say-boom "go"))
