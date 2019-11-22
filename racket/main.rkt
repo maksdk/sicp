@@ -66,3 +66,13 @@
     (when (equal? str "go") "Boom!"))
     
 (displayln (say-boom "go"))
+
+; switsch
+(define (humanize-permission symb) 
+   (case symb
+      [ ("x") "execute" ]
+      [ ("r") "read"    ]
+      [ ("w") "write"   ]
+      [ else #f ]))
+      
+(displayln (humanize-permission "x" ))
